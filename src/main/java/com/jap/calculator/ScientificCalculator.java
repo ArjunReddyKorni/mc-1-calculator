@@ -5,27 +5,28 @@ public class ScientificCalculator {
 	public double cielOfANumber(float num) throws CalculatorException
 	{
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
+		double number;
 		if(num <= 0){
 			throw new CalculatorException("number cannot be equal to or less than 0");
 		}else{
-			num = (int)num;
+			number = Math.ceil(num);
 		}
 		//or else call ceil method of Math class and return the value
 
-		return num;
+		return number;
 	}
 
 	public double floorOfANumber(float num) throws CalculatorException
 	{
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
-
+		double number;
 		if(num <= 0){
 			throw new CalculatorException("number cannot be equal to or less than 0");
 		}else{
-			num = (int)num + 1;
+			number = Math.floor(num);
 		}
 		//or else call floor method of Math class and return the value
-		return num;
+		return number;
 	}
 
     public long power(int num1, int num2) throws CalculatorException {
